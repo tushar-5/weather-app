@@ -14,10 +14,11 @@ const HumidityComponents = () => {
         <div className="humidityWrap">
           <div className="humidityData">
             <div className="title">Temperatute </div>
-            <div className="value">{Math.round(current.temp.max)}°C</div>
+            <div className="value"> Max: {Math.round(current.temp.max)}°C</div>
+            <div className="value">Min: {Math.round(current.temp.min)}°C</div>
           </div>
           <div className="humidityData">
-            <div className="title">Precipitation </div>
+            <div className="title">Humidity </div>
             <div className="value">{current.humidity} %</div>
           </div>
           <div className="humidityData">
