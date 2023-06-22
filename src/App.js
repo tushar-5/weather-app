@@ -1,24 +1,22 @@
-
 import './App.css';
 import HomeComponents from './Components/Home';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HourlyForecast from './Components/HourlyForecast';
 
 function App() {
   return (
     <div className="App">
-      <HomeComponents />
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomeComponents />} />
+          <Route path="/forecast" element={<HourlyForecast />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
 
 export default App;
-// Manifest
-// Service worker
-// https://
-// favicon.icon
-// maskable icon
-// APP name
-// install swr
-// npx create-react-app my-app --template cra-template-pwa
 
 
 

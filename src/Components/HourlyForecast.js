@@ -1,6 +1,6 @@
 import React from "react";
-import { UseWeatherAppContext } from "../../Context/Context";
-const HumidityComponents = () => {
+import { UseWeatherAppContext } from ".././Context/Context";
+const HourlyForecast = () => {
   let {
     state: { current, city },
   } = UseWeatherAppContext();
@@ -14,15 +14,8 @@ const HumidityComponents = () => {
             <div className="value"> Max: {Math.round(current.temp.max)}°C</div>
             <div className="value">Min: {Math.round(current.temp.min)}°C</div>
           </div>
-          <div className="humidityData">
-            <div className="title">Humidity </div>
-            <div className="value">{current.humidity} %</div>
+         
           </div>
-          <div className="humidityData">
-            <div className="title">Wind </div>
-            <div className="value">{Math.round(current.wind_speed)} km/h</div>
-          </div>
-        </div>
       ) : (
         ""
       )}
@@ -30,4 +23,5 @@ const HumidityComponents = () => {
   );
 };
 
-export default HumidityComponents;
+export default HourlyForecast;
+

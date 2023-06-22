@@ -5,7 +5,6 @@ import SingleCardComponents from '../SingleCard';
 const WeekInfoCardComponents = ()=>{
     let {state:{daily}, dispatch} = UseWeatherAppContext();
     const [selectedCard, setSelectedCard] = useState(0);
-    //console.log('daily', daily, 'current',current, UseWeatherAppContext());
     const updateCurrent = ()=>{
         return (
             dispatch({
@@ -24,7 +23,7 @@ const WeekInfoCardComponents = ()=>{
                 <ul className='cardList'>
                     {
                        daily && daily.length > 0 ? daily.map((item, index)=>{
-                        if (index < 7){
+                        if (index < 5){
                             return (
                                     <SingleCardComponents className={index === selectedCard ? "active" : ""} onClick={()=>{
                                         setSelectedCard(index)
